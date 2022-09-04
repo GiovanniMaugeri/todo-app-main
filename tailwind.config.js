@@ -13,9 +13,9 @@ module.exports = {
       },
       spacing: {
         '72px': '72px',
-      }
-    }
-    
+      },
+    },
   },
   plugins: [],
+  darkMode: 'class',
 }

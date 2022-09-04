@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" class="dark">
+  <head >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -23,11 +23,16 @@
     />
     <link href="./dist/output.css" rel="stylesheet">
   </head>
-  <body class="flex justify-center bg-primary-900">
+  <body class="flex justify-center dark:bg-primary-900 bg-white">
     <img
       src="./images/bg-desktop-dark.jpg"
       alt=""
-      class="fixed w-full -z-10 min-h-[200px]"
+      class="fixed w-full -z-10 min-h-[200px] hidden dark:block"
+      />
+    <img
+      src="./images/bg-desktop-light.jpg"
+      alt=""
+      class="fixed w-full -z-10 min-h-[200px] dark:hidden "
     />
     <section class="sm:w-[540px] w-full px-12 sm:mt-20 mt-12">
       <header class="container grid grid-cols-2 items-center">
@@ -39,20 +44,27 @@
         <img
           src="./images/icon-sun.svg"
           alt=""
-          class="justify-self-end aspect-square"
-        />
+          class="justify-self-end aspect-square hidden dark:block"
+          id="sun"
+          />
+        <img
+          src="./images/icon-moon.svg"
+          alt=""
+          class="justify-self-end aspect-square  dark:hidden"
+          id="moon"
+          />
       </header>
       <section class="relative sm:mt-12 mt-10">
         <i class="ball"></i>
         <input
           id="input-todo"
           type="text"
-          class="placeholder:text-gray text-white bg-primary-100 w-full sm:pl-72px pl-16 sm:pr-4 pr-2 sm:py-5 py-4 rounded-md sm:text-lg text-xs"
+          class="placeholder:text-gray dark:text-white text-black dark:bg-primary-100 bg-white w-full sm:pl-72px pl-16 sm:pr-4 pr-2 sm:py-5 py-4 rounded-md sm:text-lg text-xs"
           placeholder="Create a new todo..."
         />
       </section>
       <section
-        class="rounded-md bg-primary-100 sm:mt-6 mt-4 sm:text-lg text-xs"
+        class="rounded-md dark:bg-primary-100 bg-white sm:mt-6 mt-4 sm:text-lg text-xs shadow-lg"
       >
         <ul id="todos" data-filter="All">
           <!--
@@ -107,16 +119,16 @@
           <span id="items-left">5 items left</span>
           <nav class="sm:block hidden font-bold">
             <ul class="flex gap-2">
-              <li class="hover:text-white active All">All</li>
-              <li class="hover:text-white Active">Active</li>
-              <li class="hover:text-white Completed">Completed</li>
+              <li class="dark:hover:text-white hover:text-black active All">All</li>
+              <li class="dark:hover:text-white hover:text-black Active">Active</li>
+              <li class="dark:hover:text-white hover:text-black Completed">Completed</li>
             </ul>
           </nav>
           <span id="clear-completed"class="cursor-pointer hover:text-white">Clear Completed</span>
         </footer>
       </section>
       <nav
-        class="block sm:hidden bg-primary-100 rounded-md p-4 text-gray text-xs font-bold mt-4"
+        class="block sm:hidden dark:bg-primary-100 bg-white rounded-md p-4 text-gray text-xs font-bold mt-4 shadow-lg"
       >
         <ul class="flex justify-center gap-3">
           <li class="All">All</li>

@@ -8,6 +8,9 @@ const CompletedButton = document.getElementsByClassName("Completed");
 
 const clearCompletedButton = document.getElementById("clear-completed");
 
+const sun = document.getElementById("sun")
+const moon = document.getElementById("moon")
+
 var itemLeft = 0;
 var newText = "";
 
@@ -129,3 +132,13 @@ function resetAllNav(){
     [...ActiveButton].forEach(e => e.classList.remove("active"));
     [...CompletedButton].forEach(e => e.classList.remove("active"))
 }
+
+
+sun.addEventListener("click", () =>{
+  console.log(document);
+  document.documentElement.classList.remove("dark")
+})
+moon.addEventListener("click", () =>{
+  console.log("click");
+  document.documentElement.classList.add("dark")
+})
