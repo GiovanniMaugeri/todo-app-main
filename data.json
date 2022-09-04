@@ -1,0 +1,26 @@
+[
+    {
+        "text" : "Il primo",
+        "completed" : true
+    },
+    {
+        "text" : "Il secondo",
+        "completed" : false
+    },
+    {
+        "text" : "Il terzo",
+        "completed" : false
+    },
+    {
+        "text" : "Il quarto",
+        "completed" : true
+    },
+    {
+        "text" : "Il quinto",
+        "completed" : false
+    },
+    {
+        "text" : "Il sesto",
+        "completed" : true
+    }
+]

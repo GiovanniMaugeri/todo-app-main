@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ball{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid  hsl(234, 39%, 85%);
+    position: absolute;
+    top: 1.25rem;
+    left: 1.5rem;
+}
+@media (max-width:40em){
+    .ball{
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 0.875rem;
+        left: 1.25rem;
+        color: hsl(235, 24%, 19%);
+    }
+   
+    
+}
+ul[data-filter = "All"] .todo{
+    display: flex;
+}
+ul[data-filter = "Active"] .todo[data-completed = "false"]{
+    display: flex;
+}
+ul[data-filter = "Active"] .todo[data-completed = "true"]{
+    display: none;
+}
+ul[data-filter = "Completed"] .todo[data-completed = "ture"]{
+    display: flex;
+}
+ul[data-filter = "Completed"] .todo[data-completed = "false"]{
+    display: none;
+}
+
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    color:hsl(234, 39%, 85%);
+    padding:  1.25rem 1.25rem 1.25rem 4.5rem;
+    position: relative;
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+.todo[data-completed = "true"]{
+    text-decoration: line-through;
+}
+
+.todo i {
+    display: grid;
+    place-content: center;
+}
+.todo i img{
+    display: none;
+}
+.todo[data-completed = "true"] i {
+    background: linear-gradient(90deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+.todo[data-completed = "true"] i img{
+    display: block;
+}
+.todo:hover > img{
+    display: block;
+}
+@media (max-width:40em){
+    .todo{
+        padding:  1rem 0.5rem 1rem 4rem;
+    }
+}
+.active{
+    color: hsl(220, 98%, 61%);
+}
+li{
+    cursor: pointer;
+}

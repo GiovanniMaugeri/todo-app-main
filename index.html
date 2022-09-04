@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="flex justify-center bg-primary-900">
+    <img
+      src="./images/bg-desktop-dark.jpg"
+      alt=""
+      class="fixed w-full -z-10 min-h-[200px]"
+    />
+    <section class="sm:w-[540px] w-full px-12 sm:mt-20 mt-12">
+      <header class="container grid grid-cols-2 items-center">
+        <h1
+          class="font-bold sm:text-3xl text-2xl text tracking-[.6em] text-white"
+        >
+          TODO
+        </h1>
+        <img
+          src="./images/icon-sun.svg"
+          alt=""
+          class="justify-self-end aspect-square"
+        />
+      </header>
+      <section class="relative sm:mt-12 mt-10">
+        <i class="ball"></i>
+        <input
+          id="input-todo"
+          type="text"
+          class="placeholder:text-gray text-white bg-primary-100 w-full sm:pl-72px pl-16 sm:pr-4 pr-2 sm:py-5 py-4 rounded-md sm:text-lg text-xs"
+          placeholder="Create a new todo..."
+        />
+      </section>
+      <section
+        class="rounded-md bg-primary-100 sm:mt-6 mt-4 sm:text-lg text-xs"
+      >
+        <ul id="todos" data-filter="All">
+          <!--
+          <li class="todo" data-completed="true">
+            <i class="ball">
+              <img src="./images/icon-check.svg" alt="" />
+            </i>
+            asd
+            <img
+              src="./images/icon-cross.svg"
+              alt=""
+              class="self-center sm:hidden cursor-pointer"
+            />
+          </li>
+          <li class="todo" data-completed="false">
+            <i class="ball">
+              <img src="./images/icon-check.svg" alt="" />
+            </i>
+            asd
+            <img
+              src="./images/icon-cross.svg"
+              alt=""
+              class="self-center sm:hidden cursor-pointer"
+            />
+          </li>
+          <li class="todo" data-completed="false">
+            <i class="ball">
+              <img src="./images/icon-check.svg" alt="" />
+            </i>
+            asd
+            <img
+              src="./images/icon-cross.svg"
+              alt=""
+              class="self-center sm:hidden cursor-pointer"
+            />
+          </li>
+          <li class="todo" data-completed="true">
+            <i class="ball">
+              <img src="./images/icon-check.svg" alt="" /> </i
+            >asd
+            <img
+              src="./images/icon-cross.svg"
+              alt=""
+              class="self-center sm:hidden cursor-pointer"
+            />
+          </li>
+        -->
+        </ul>
+        <footer
+          class="text-gray flex justify-between items-center sm:px-6 px-4 sm:py-5 py-4 text-xs"
+        >
+          <span id="items-left">5 items left</span>
+          <nav class="sm:block hidden font-bold">
+            <ul class="flex gap-2">
+              <li class="hover:text-white active All">All</li>
+              <li class="hover:text-white Active">Active</li>
+              <li class="hover:text-white Completed">Completed</li>
+            </ul>
+          </nav>
+          <span id="clear-completed"class="cursor-pointer hover:text-white">Clear Completed</span>
+        </footer>
+      </section>
+      <nav
+        class="block sm:hidden bg-primary-100 rounded-md p-4 text-gray text-xs font-bold mt-4"
+      >
+        <ul class="flex justify-center gap-3">
+          <li class="All">All</li>
+          <li class="Active">Active</li>
+          <li class="Completed">Completed</li>
+        </ul>
+      </nav>
+    </section>
+    <script src="data.json"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
